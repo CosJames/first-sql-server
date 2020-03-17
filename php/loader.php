@@ -1,4 +1,7 @@
 <?php
 
     # Import php files here
-    include_once 'inc/databaseHelper.inc.php';
+    include 'inc/databaseHelper.inc.php';
+    include 'inc/controllerMembers.inc.php';
+    include 'inc/viewMembers.inc.php';
+
