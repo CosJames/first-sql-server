@@ -18,34 +18,6 @@
 </head>
 <body>
 
-<<<<<<< HEAD
-    <table>
-        <tr>
-            <th>Id</th>
-            <th>Namdwde</th>
-        </tr>
-        <tr>
-            <td>Hello</td>
-            <td>Hello</td>
-        </tr>
-    </table>
-
-    <?php
-        # SQL Syntax
-        $sql = "SELECT * FROM Members;";
-        # Parameter is the connection and the SQL Syntax
-        $result = mysqli_query($conn, $sql);
-        # Gather the number of rows from the database
-        $data = mysqli_num_rows($result);
-        # If the number of rows is not less than 0
-        if ($data > 0) {
-            # While there are data in the database it will spit out the remaining data
-            while ($row = mysqli_fetch_assoc($result)) {
-                echo "User ID : ".$row["id"]. "</br>"."User Name : ".$row["username"]. "</br>";
-            }
-        }
-    ?>
-=======
     <div class="container">
         <h1>mySQL Database List</h1>
         <a href="#create-tab">Create Tab</a>
@@ -54,8 +26,8 @@
             <thead>
                 <tr id="column">
                     <th scope="col">id</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Email</th>
+                    <th scope="col">Namdadwe</th>
+                    <th scope="col">Emaidawdwal</th>
                     <th scope="col">Password</th>
                 </tr>
             </thead>
@@ -64,7 +36,6 @@
                     $gatherMembers = new Members;
                     $gatherMembers->getAllMembers();
                 ?>  
->>>>>>> 80f5db6ffe249078a9217f483127311c352750b2
 
 
                 <!--
