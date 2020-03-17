@@ -5,3 +5,14 @@
 body {
     background: whitesmoke;
 }
+
+table, th, td {
+    border : 1px solid black;
+}
+
+#column {
+    th {
+        background : #a0a0a0;
+        color : white;
+    }
+}

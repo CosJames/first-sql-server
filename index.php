@@ -18,6 +18,7 @@
 </head>
 <body>
 
+<<<<<<< HEAD
     <table>
         <tr>
             <th>Id</th>
@@ -44,7 +45,91 @@
             }
         }
     ?>
+=======
+    <div class="container">
+        <h1>mySQL Database List</h1>
+        <a href="#create-tab">Create Tab</a>
+        <h3>Select</h3>
+        <table class="table">
+            <thead>
+                <tr id="column">
+                    <th scope="col">id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    $gatherMembers = new Members;
+                    $gatherMembers->getAllMembers();
+                ?>  
+>>>>>>> 80f5db6ffe249078a9217f483127311c352750b2
 
 
+                <!--
+                <?php
+                    $data = "Sebastian";
+                    # SQL Template
+                    $querySelect = "SELECT * FROM Members WHERE username=?;";
+                    # Parameter is the connection and the SQL Syntax
+                    # $executeSelect = mysqli_query($conn, $querySelect);
+
+                    # Create a Prepared Statement
+                    $stmt = mysqli_stmt_init($conn);
+                    # Prepare Prepared Statement
+                    if (mysqli_stmt_prepare($stmt, $querySelect)) {
+                        # Bind Parameters to the placeholder
+                        # parameter (statement, indicator, actualDataThatWillBeInserted, WhatEverVariableThatIsCreated)
+                        mysqli_stmt_bind_param($stmt, "s", $data);
+                        # Run Parameters inside database
+                        mysqli_stmt_execute($stmt);
+                        # Get the Result from the template
+                        $result = mysqli_stmt_get_result($stmt);
+
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            echo "<tr><th scope='row'>".$row["id"]."</th><td>".$row["username"]."</td><td>".$row["email"]."</td><td>ENCRYPT</td></tr>";
+                        }
+
+                    } else {
+                        echo "SQL Statement Failed!";
+                    }
+
+                    # Gather the number of rows from the database
+
+                    # $data = mysqli_num_rows($executeSelect);
+
+                    # If the number of rows is not less than 0
+
+                    # if ($data > 0) {
+                    #   # While there are data in the database it will spit out the remaining data
+                    #    while ($row = mysqli_fetch_assoc($executeSelect)) {
+                    #        echo "<tr><th scope='row'>".$row["id"]."</th><td>".$row["username"]."</td><td>".$row["email"]."</td><td>ENCRYPT</td></tr>";
+                    #    }
+                    # }
+                ?>-->
+            </tbody>
+        </table>
+
+        <!--Test Form for insert method (SQL)-->
+        <h3>Create</h3>
+        <form id="create-tab" action="inc/insert.inc.php" method="POST">
+            <label>Name : </label>
+            <br>
+            <input type="text" name="Name">
+            <br>
+            <label>Email : </label>
+            <br>
+            <input type="email" name="Email">
+            <br>
+            <label>Password : </label>
+            <br>
+            <input type="password" name="Password">
+            <br>
+            <button type="submit" name="submit"> Insert </button>
+        </form>
+
+
+    </div>
 </body>
 </html>
