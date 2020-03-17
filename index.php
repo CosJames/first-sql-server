@@ -21,7 +21,7 @@
     <table>
         <tr>
             <th>Id</th>
-            <th>Name</th>
+            <th>Namdwde</th>
         </tr>
         <tr>
             <td>Hello</td>
